@@ -6,7 +6,7 @@ _pkgname=xz
 _architectures="i686-w64-mingw32 x86_64-w64-mingw32"
 
 pkgname=mingw-w64-xz
-pkgver=5.6.1
+pkgver=5.6.2
 pkgrel=1
 pkgdesc="Library and command line tools for XZ and LZMA compressed files (mingw-w64)"
 arch=('any')
@@ -15,8 +15,9 @@ license=('custom' 'GPL' 'LGPL')
 depends=('mingw-w64-crt')
 makedepends=('mingw-w64-configure' 'git' 'po4a' 'doxygen')
 options=('!strip' 'staticlibs' '!buildflags')
+validpgpkeys=('3690C240CE51B4670D30AD1C38EE757D69184620') # Lasse Collin <lasse.collin@tukaani.org>
 source=("git+https://git.tukaani.org/xz.git#tag=v${pkgver}")
-sha256sums=('SKIP')
+sha256sums=('a71fcf56faa1f7d9e9708ca8d6a97906b929307d6a98d220018852eef37853c8')
 
 prepare() {
   cd "${srcdir}/${_pkgname}"
